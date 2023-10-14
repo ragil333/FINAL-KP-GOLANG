@@ -30,5 +30,9 @@ func Initialize() {
 	RoleRoutes(g)
 	CategoryRoutes(g)
 	BookRoutes(g)
-	e.Logger.Fatal(e.Start(":8000"))
+	e.Logger.Fatal(e.Start(GetPort()))
+}
+func GetPort() string {
+	port := os.Getenv("PORT")
+	return ":" + port
 }
