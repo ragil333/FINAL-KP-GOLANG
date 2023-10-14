@@ -27,7 +27,7 @@ type GetJwtToken struct {
 
 func GetToken(User interface{}) (GetJwtToken, error) {
 	var token GetJwtToken
-	secret := os.Getenv("jwt_secret")
+	secret := os.Getenv("JWT_SECRET")
 	AccessTokenExpiredTime := 1
 	RefreshTokenExpiredTime := 168
 

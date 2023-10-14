@@ -12,10 +12,10 @@ func DbConfig() string {
 	if err != nil {
 		panic(err)
 	}
-	db_name := os.Getenv("db_name")
-	db_host := os.Getenv("db_host")
-	db_user := os.Getenv("db_user")
-	db_password := os.Getenv("db_password")
+	db_name := os.Getenv("DB_NAME")
+	db_host := os.Getenv("DB_HOST")
+	db_user := os.Getenv("DB_USER")
+	db_password := os.Getenv("DB_PASSWORD")
 	dsn := fmt.Sprintf("%s:%s@tcp(%s)/%s?parseTime=true", db_user, db_password, db_host, db_name)
 	return dsn
 }
