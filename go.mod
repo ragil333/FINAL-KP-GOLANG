@@ -5,7 +5,6 @@ go 1.20
 require (
 	github.com/go-playground/validator v9.31.0+incompatible
 	github.com/golang-jwt/jwt/v4 v4.5.0
-	github.com/joho/godotenv v1.5.1
 	github.com/labstack/echo v3.3.10+incompatible
 	golang.org/x/crypto v0.14.0
 	gorm.io/driver/mysql v1.5.1

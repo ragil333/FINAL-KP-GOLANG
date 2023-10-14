@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"kp-elibrary-golang/controllers/RoleController"
 	"os"
 
 	"github.com/labstack/echo"
@@ -15,6 +16,7 @@ func Initialize() {
 	g := e.Group("api/")
 
 	AuthRoutes(g)
+	g.Add("GET", "/", RoleController.Index)
 
 	e.Use(middleware.JWTWithConfig(middleware.JWTConfig{
 		SigningMethod: "HS256",
