@@ -2,6 +2,7 @@ package config
 
 import (
 	"fmt"
+	"log"
 	"os"
 
 	"github.com/joho/godotenv"
@@ -10,7 +11,7 @@ import (
 func DbConfig() string {
 	err := godotenv.Load()
 	if err != nil {
-		panic("canot load env file")
+		log.Fatal("Error loading .env file")
 	}
 	db_name := os.Getenv("DB_NAME")
 	db_host := os.Getenv("DB_HOST")
