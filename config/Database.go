@@ -8,7 +8,7 @@ import (
 )
 
 func DbConfig() string {
-	err := godotenv.Load(".env")
+	err := godotenv.Load()
 	if err != nil {
 		panic(err)
 	}
