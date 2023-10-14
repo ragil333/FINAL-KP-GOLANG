@@ -10,7 +10,7 @@ import (
 func DbConfig() string {
 	err := godotenv.Load()
 	if err != nil {
-		panic(err)
+		panic("canot load env file")
 	}
 	db_name := os.Getenv("DB_NAME")
 	db_host := os.Getenv("DB_HOST")
