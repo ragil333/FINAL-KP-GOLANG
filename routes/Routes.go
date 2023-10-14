@@ -20,7 +20,7 @@ func Initialize() {
 
 	e.Use(middleware.JWTWithConfig(middleware.JWTConfig{
 		SigningMethod: "HS256",
-		SigningKey:    []byte(os.Getenv("jwt_secret")),
+		SigningKey:    []byte(os.Getenv("JWT_SECRET")),
 		Skipper: func(c echo.Context) bool {
 			if c.Path() == "/api/auth/login" || c.Path() == "/api/auth/register" {
 				return true
